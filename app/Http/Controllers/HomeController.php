@@ -22,11 +22,9 @@ class HomeController extends Controller
     public function buscarModelo(Request $request){
         $term = trim($request['q']);
         if (empty($term)) {
-            $x = [];
+            $term = " ";
         }
-        else{
-            $x = [['id' => '1', 'text' => 'Gsdfsf'], ['id' => '2', 'text' => 'Tsdfs']];
-        }
+        $x = [];
         return response()->json($x);
         
     }
