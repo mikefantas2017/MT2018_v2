@@ -4,6 +4,7 @@ namespace MT2018\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Iluminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -24,8 +25,13 @@ class HomeController extends Controller
         if (empty($term)) {
             $term = " ";
         }
-        $x = [];
-        return response()->json($x);
+        $structs = DB::table('estructura')
+                            ->select('id', 'nombre as text')
+                            ->where('nombre', 'like', '%'.$term.'%')
+                            ->limit(10)
+                            ->orderBy('nombre')
+                            ->get();
+        return response()->json($structs);
         
     }
 }
