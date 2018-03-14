@@ -32,6 +32,5 @@ class HomeController extends Controller
                             ->orderBy('nombre')
                             ->get();
         return response()->json($structs);
-        
     }
 }

@@ -22,3 +22,7 @@ Route::get('contacto', 'HomeController@contacto');
 Route::get('monWindow', 'HomeController@monWindow');
 
 Route::get('buscarModelo', 'HomeController@buscarModelo');
+
+Route::view('displayPanel', 'Home.displayPanel');
+
+Route::view('noDisplayPanel', 'Home.noDisplayPanel');
