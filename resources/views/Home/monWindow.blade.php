@@ -26,7 +26,9 @@
             </div>
             {{-- Panel de visualización del modelo cargado. --}}
             <div id="displayPanel" class="col-lg-8" style="padding: 10px" align = "left">
-                @include('Home.noDisplayPanel')
+                <div class="panel panel-default" style="padding: 5px; height: 400px; width: 100%" id="panelWin">
+                    @include('Home.noDisplayPanel')
+                </div>
             </div>
         </div>
     </div>

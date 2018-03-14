@@ -43,13 +43,13 @@ $(function(){
 
     // Evento de selección de select2.
     $('#selectStruct').on('select2:select', function (e) {
-        $('#displayPanel').empty();
-        $('#displayPanel').load('displayPanel');
+        $('#panelWin').empty();
+        $('#panelWin').load('displayPanel');
     });
 
     // Evento de deselección de select2.
     $('#selectStruct').on('select2:unselect', function (e) {
-        $('#displayPanel').empty();
-        $('#displayPanel').load('noDisplayPanel');
+        $('#panelWin').empty();
+        $('#panelWin').load('noDisplayPanel');
     });
 });
