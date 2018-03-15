@@ -4,9 +4,6 @@
  * Funciones para la vista "monWindow".
  */
 
-/*var pVw = $('#panelView')[0].clientWidth;
-var pVh = $('#panelView')[0].clientHeight;*/
-
 $(function(){
     // jQuery select2.
     $('#selectStruct').select2({
