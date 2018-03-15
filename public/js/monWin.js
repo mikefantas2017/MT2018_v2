@@ -41,7 +41,9 @@ $(function(){
     // Evento de selección de select2.
     $('#selectStruct').on('select2:select', function (e) {
         $('#panelWin').empty();
-        $('#panelWin').load('displayPanel');
+        $('#panelWin').load('displayPanel', function(){
+            displayModel();
+        });
     });
 
     // Evento de deselección de select2.

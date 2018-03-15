@@ -4,6 +4,12 @@
 @endsection
 @section('scripts')
     {{ Html::script('js/select2.min.js') }}
+    {{-- Scripts para graficación --}}
+    {{ Html::script('js/libWebGL/webgl-utils.js') }}
+    {{ Html::script('js/libWebGL/webgl-debug.js') }}
+    {{ Html::script('js/libWebGL/cuon-utils.js') }}
+    {{ Html::script('js/libWebGL/cuon-matrix.js') }}
+    {{ Html::script('js/mainGl.js') }}
     {{ Html::script('js/monWin.js') }}
 @endsection
 @section('content')
