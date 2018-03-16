@@ -42,7 +42,7 @@ function displayModel() {
     // Resize canvas.
 	resizeCanvas(gl.canvas);
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-    
+
     // Desplegar modelo.
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
@@ -78,6 +78,5 @@ function resizeCanvas(canvas){
 	if(canvas.width != displaySize[0] || canvas.height != displaySize[1]){
 		canvas.width = displaySize[0];
 		canvas.height = displaySize[1];
-		console.log(canvas.width + '; ' + canvas.height);
 	}
 }
