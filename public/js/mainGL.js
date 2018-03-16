@@ -39,6 +39,10 @@ function displayModel() {
         return;
     }
 
+    // Resize canvas.
+	resizeCanvas(gl.canvas);
+    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+    
     // Desplegar modelo.
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
@@ -67,4 +71,13 @@ function initVertexBuffers(gl) {
     gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(a_Position);
     return n;
+}
+
+function resizeCanvas(canvas){
+	var displaySize = [canvas.clientWidth, canvas.clientHeight];
+	if(canvas.width != displaySize[0] || canvas.height != displaySize[1]){
+		canvas.width = displaySize[0];
+		canvas.height = displaySize[1];
+		console.log(canvas.width + '; ' + canvas.height);
+	}
 }

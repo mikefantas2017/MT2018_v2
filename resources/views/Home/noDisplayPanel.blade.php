@@ -6,5 +6,6 @@
                 <td class="text-center"><span class="h3">Ningún modelo cargado.</span></td>
             </tr>
         </tbody>
-    </table>
+    </table>      
 </div>
+

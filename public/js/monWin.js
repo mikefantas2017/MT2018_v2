@@ -42,6 +42,8 @@ $(function(){
     $('#selectStruct').on('select2:select', function (e) {
         $('#panelWin').empty();
         $('#panelWin').load('displayPanel', function(){
+            $('#gl')[0].width = parseInt($('#loadedModel').css('width'), 10);
+            $('#gl')[0].height = parseInt($('#loadedModel').css('height'), 10);
             displayModel();
         });
     });
@@ -49,6 +51,10 @@ $(function(){
     // Evento de deselección de select2.
     $('#selectStruct').on('select2:unselect', function (e) {
         $('#panelWin').empty();
-        $('#panelWin').load('noDisplayPanel');
+        $('#panelWin').load('noDisplayPanel', function(){
+            console.log('......');
+        });
     });
+
+    
 });
